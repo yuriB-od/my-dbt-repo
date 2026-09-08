@@ -15,5 +15,11 @@ macro-paths:
 snapshot-paths:
   - snapshots
 models:
-  DBT_GIT_INT:
-    +materialized: view
+  starter_project:
+    staging:
+      +schema: LANDING
+      +materialized: view
+    marts:
+      +schema: FINAL
+      +materialized: table    
+      +transient: false
