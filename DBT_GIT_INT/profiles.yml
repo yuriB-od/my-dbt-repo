@@ -1,0 +1,10 @@
+DBT_GIT_INT:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: TEST_DBT
+      schema: LANDING
+      threads: 8
