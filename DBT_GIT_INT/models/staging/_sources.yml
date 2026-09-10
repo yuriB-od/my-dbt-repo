@@ -25,4 +25,17 @@ sources:
       description: 'ISO country code'
       data_tests:
         - not_null
-   
+  - name: COUNTRIES
+    description: 'Country reference data'
+    columns:
+    - name: COUNTRY
+      description: 'Primary key for countries'
+      data_tests:
+        - not_null
+        # - dbt_utils.accepted_range:  # Numeric range validation
+        #     min_value: 1
+        #     max_value: 1000
+    - name: ISO_CURRENCY
+      description: 'Country name'
+      data_tests:
+        - not_null   

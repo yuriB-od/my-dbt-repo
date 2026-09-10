@@ -10,7 +10,7 @@
     
     {% if results %}
       {% for row in results %}
-        {% do pk_cols.append(row['column_name'] | lower) %}
+        {% do pk_cols.append(row['column_name'] | upper) %}
       {% endfor %}
     {% endif %}
   {% endif %}
