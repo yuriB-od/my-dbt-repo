@@ -9,6 +9,7 @@
 {% do log("DEBUG TARGET RELATION VALUE: " ~ target_relation, info=True) %}
 
 {% set dynamic_pk = get_primary_keys(target_relation) %}
+{% set dynamic_pk = ['COUNTRY'] %}
 
 {% do log("DEBUG PK VALUE: " ~ dynamic_pk, info=True) %}
 

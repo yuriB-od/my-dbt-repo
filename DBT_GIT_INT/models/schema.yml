@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: dim_country_new
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['COUNTRY']  # dbt parses this FIRST
