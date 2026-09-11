@@ -1,8 +1,8 @@
-{{ config(
-    schema = 'FINAL',
-    transient = false,
-    merge_exclude_columns = ['CREATE_TIME']
-) }}
+{# {{ config( #}
+    -- schema = 'FINAL',
+    -- transient = false,
+    -- merge_exclude_columns = ['CREATE_TIME']
+-- ) }}
 
 SELECT 
     HEX_DECODE_BINARY(MD5(COUNTRY)) AS country_sk,

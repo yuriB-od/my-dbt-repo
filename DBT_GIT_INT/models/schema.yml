@@ -6,3 +6,6 @@ models:
       materialized: incremental
       incremental_strategy: merge
       unique_key: ['COUNTRY']  # dbt parses this FIRST
+      merge_exclude_columns: ['CREATE_TIME']
+      schema: FINAL
+      transient: false

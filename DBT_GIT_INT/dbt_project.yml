@@ -21,5 +21,6 @@ models:
       +materialized: view
     marts:
       +schema: FINAL
-      +materialized: table    
+      +materialized: incremental
+      +incremental_strategy: merge
       +transient: false
