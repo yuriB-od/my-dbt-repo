@@ -55,3 +55,23 @@ sources:
         - not_null         
     - name: LOAD_TIME
     - name: VALID_YN
+  - name: ORDERS_APP
+    description: 'Country reference data'
+    columns:
+    - name: ORDER_ID
+      description: 'Primary key for countries'
+      data_tests:
+        - not_null
+        # - dbt_utils.accepted_range:  # Numeric range validation
+        #     min_value: 1
+        #     max_value: 1000
+    - name: TRUCK_ID
+      description: 'Country name'
+      data_tests:
+        - not_null
+    - name: ORDER_DETAIL_ID
+      description: 'ISO currency code'
+    - name: LINE_NUMBER
+      description: 'ISO country code'
+      data_tests:
+        - not_null    

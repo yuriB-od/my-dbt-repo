@@ -9,3 +9,11 @@ models:
       merge_exclude_columns: ['CREATE_TIME']
       schema: FINAL
       transient: false
+  - name: fact_orders
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      unique_key: ['ORDER_ID','LINE_NUMBER']  # dbt parses this FIRST
+      merge_exclude_columns: ['DBT_CREATED_AT']
+      schema: FINAL
+      transient: false      
